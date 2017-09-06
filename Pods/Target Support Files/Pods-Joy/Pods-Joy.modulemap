@@ -1,0 +1,6 @@
+framework module Pods_Joy {
+  umbrella header "Pods-Joy-umbrella.h"
+
+  export *
+  module * { export * }
+}

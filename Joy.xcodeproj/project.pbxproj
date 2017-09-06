@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3041F61992EBC1B5FFDA9043 /* Pods_Joy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774F1522B3910DA13546E14B /* Pods_Joy.framework */; };
+		B454ABC61F5F9E120039F47F /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B454ABC51F5F9E120039F47F /* EventsModel.swift */; };
+		B45A30851F50D6F300B84924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45A30841F50D6F300B84924 /* AppDelegate.swift */; };
+		B45A30871F50D6F300B84924 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45A30861F50D6F300B84924 /* ViewController.swift */; };
+		B45A308A1F50D6F300B84924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45A30881F50D6F300B84924 /* Main.storyboard */; };
+		B45A308C1F50D6F300B84924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45A308B1F50D6F300B84924 /* Assets.xcassets */; };
+		B4DC6CDC1F5606CD003AC4C7 /* NewEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DC6CDB1F5606CD003AC4C7 /* NewEventCollectionViewCell.swift */; };
+		B4DC6CDE1F5617A7003AC4C7 /* AddEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DC6CDD1F5617A7003AC4C7 /* AddEventModel.swift */; };
+		B4DC6CE01F561A1B003AC4C7 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DC6CDF1F561A1B003AC4C7 /* Alerts.swift */; };
+		B4DC6CE41F562F9B003AC4C7 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DC6CE31F562F9B003AC4C7 /* PhotosViewController.swift */; };
+		B4DC6CEA1F566671003AC4C7 /* PresentPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DC6CE91F566671003AC4C7 /* PresentPhotoViewController.swift */; };
+		B4F324641F5F459D00E322C8 /* MomentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F324631F5F459D00E322C8 /* MomentsCollectionViewCell.swift */; };
+		B4F3246A1F5F470000E322C8 /* CurrentEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F324691F5F470000E322C8 /* CurrentEventCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		545C2C3F8B7F69CF22F8E28E /* Pods-Joy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Joy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Joy/Pods-Joy.debug.xcconfig"; sourceTree = "<group>"; };
+		774F1522B3910DA13546E14B /* Pods_Joy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Joy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B454ABC51F5F9E120039F47F /* EventsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
+		B45A30811F50D6F300B84924 /* Joy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Joy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45A30841F50D6F300B84924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B45A30861F50D6F300B84924 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B45A30891F50D6F300B84924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B45A308B1F50D6F300B84924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B45A308D1F50D6F300B84924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4DC6CDB1F5606CD003AC4C7 /* NewEventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventCollectionViewCell.swift; sourceTree = "<group>"; };
+		B4DC6CDD1F5617A7003AC4C7 /* AddEventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventModel.swift; sourceTree = "<group>"; };
+		B4DC6CDF1F561A1B003AC4C7 /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		B4DC6CE31F562F9B003AC4C7 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		B4DC6CE91F566671003AC4C7 /* PresentPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentPhotoViewController.swift; sourceTree = "<group>"; };
+		B4ECF5141F58C1430051B74A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		B4F324631F5F459D00E322C8 /* MomentsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		B4F324691F5F470000E322C8 /* CurrentEventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentEventCollectionViewCell.swift; sourceTree = "<group>"; };
+		F6C2E6BEFB4046EB77530642 /* Pods-Joy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Joy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Joy/Pods-Joy.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B45A307E1F50D6F300B84924 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3041F61992EBC1B5FFDA9043 /* Pods_Joy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05C9CC01C40D8E9B2BE19F92 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				545C2C3F8B7F69CF22F8E28E /* Pods-Joy.debug.xcconfig */,
+				F6C2E6BEFB4046EB77530642 /* Pods-Joy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8584F87CC938D18E32DA4F25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				774F1522B3910DA13546E14B /* Pods_Joy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B45A30781F50D6F300B84924 = {
+			isa = PBXGroup;
+			children = (
+				B45A30831F50D6F300B84924 /* Joy */,
+				B45A30821F50D6F300B84924 /* Products */,
+				05C9CC01C40D8E9B2BE19F92 /* Pods */,
+				8584F87CC938D18E32DA4F25 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B45A30821F50D6F300B84924 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B45A30811F50D6F300B84924 /* Joy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B45A30831F50D6F300B84924 /* Joy */ = {
+			isa = PBXGroup;
+			children = (
+				B4F3245E1F5F43F600E322C8 /* Model */,
+				B4F3245D1F5F43A800E322C8 /* Event Entry  */,
+				B4F3245C1F5F438F00E322C8 /* All Moments */,
+				B4F3245B1F5F437E00E322C8 /* Present Photos */,
+				B45A30881F50D6F300B84924 /* Main.storyboard */,
+				B45A30931F50D6FD00B84924 /* Supporting Files */,
+			);
+			path = Joy;
+			sourceTree = "<group>";
+		};
+		B45A30931F50D6FD00B84924 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4ECF5141F58C1430051B74A /* Podfile */,
+				B45A30841F50D6F300B84924 /* AppDelegate.swift */,
+				B45A308B1F50D6F300B84924 /* Assets.xcassets */,
+				B45A308D1F50D6F300B84924 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4F3245B1F5F437E00E322C8 /* Present Photos */ = {
+			isa = PBXGroup;
+			children = (
+				B4DC6CE91F566671003AC4C7 /* PresentPhotoViewController.swift */,
+			);
+			name = "Present Photos";
+			sourceTree = "<group>";
+		};
+		B4F3245C1F5F438F00E322C8 /* All Moments */ = {
+			isa = PBXGroup;
+			children = (
+				B4DC6CE31F562F9B003AC4C7 /* PhotosViewController.swift */,
+				B4F324631F5F459D00E322C8 /* MomentsCollectionViewCell.swift */,
+			);
+			name = "All Moments";
+			sourceTree = "<group>";
+		};
+		B4F3245D1F5F43A800E322C8 /* Event Entry  */ = {
+			isa = PBXGroup;
+			children = (
+				B45A30861F50D6F300B84924 /* ViewController.swift */,
+				B4DC6CDB1F5606CD003AC4C7 /* NewEventCollectionViewCell.swift */,
+				B4F324691F5F470000E322C8 /* CurrentEventCollectionViewCell.swift */,
+			);
+			name = "Event Entry ";
+			sourceTree = "<group>";
+		};
+		B4F3245E1F5F43F600E322C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B4DC6CDF1F561A1B003AC4C7 /* Alerts.swift */,
+				B4DC6CDD1F5617A7003AC4C7 /* AddEventModel.swift */,
+				B454ABC51F5F9E120039F47F /* EventsModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B45A30801F50D6F300B84924 /* Joy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B45A30901F50D6F300B84924 /* Build configuration list for PBXNativeTarget "Joy" */;
+			buildPhases = (
+				ED58DDD19D688139637C6C79 /* [CP] Check Pods Manifest.lock */,
+				B45A307D1F50D6F300B84924 /* Sources */,
+				B45A307E1F50D6F300B84924 /* Frameworks */,
+				B45A307F1F50D6F300B84924 /* Resources */,
+				FDE0DED9403AA47F88846808 /* [CP] Embed Pods Frameworks */,
+				D7D10602D26B3FC69F062F00 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Joy;
+			productName = Joy;
+			productReference = B45A30811F50D6F300B84924 /* Joy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B45A30791F50D6F300B84924 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Arjun Lalwani";
+				TargetAttributes = {
+					B45A30801F50D6F300B84924 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = E4UXPKTGZ7;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B45A307C1F50D6F300B84924 /* Build configuration list for PBXProject "Joy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B45A30781F50D6F300B84924;
+			productRefGroup = B45A30821F50D6F300B84924 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B45A30801F50D6F300B84924 /* Joy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B45A307F1F50D6F300B84924 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45A308C1F50D6F300B84924 /* Assets.xcassets in Resources */,
+				B45A308A1F50D6F300B84924 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D7D10602D26B3FC69F062F00 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Joy/Pods-Joy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED58DDD19D688139637C6C79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FDE0DED9403AA47F88846808 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Joy/Pods-Joy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B45A307D1F50D6F300B84924 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F3246A1F5F470000E322C8 /* CurrentEventCollectionViewCell.swift in Sources */,
+				B4DC6CDC1F5606CD003AC4C7 /* NewEventCollectionViewCell.swift in Sources */,
+				B45A30871F50D6F300B84924 /* ViewController.swift in Sources */,
+				B4DC6CDE1F5617A7003AC4C7 /* AddEventModel.swift in Sources */,
+				B4DC6CE41F562F9B003AC4C7 /* PhotosViewController.swift in Sources */,
+				B4DC6CE01F561A1B003AC4C7 /* Alerts.swift in Sources */,
+				B45A30851F50D6F300B84924 /* AppDelegate.swift in Sources */,
+				B4F324641F5F459D00E322C8 /* MomentsCollectionViewCell.swift in Sources */,
+				B454ABC61F5F9E120039F47F /* EventsModel.swift in Sources */,
+				B4DC6CEA1F566671003AC4C7 /* PresentPhotoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B45A30881F50D6F300B84924 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B45A30891F50D6F300B84924 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B45A308E1F50D6F300B84924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		B45A308F1F50D6F300B84924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B45A30911F50D6F300B84924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 545C2C3F8B7F69CF22F8E28E /* Pods-Joy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = E4UXPKTGZ7;
+				INFOPLIST_FILE = Joy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Arjun.Joy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B45A30921F50D6F300B84924 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6C2E6BEFB4046EB77530642 /* Pods-Joy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = E4UXPKTGZ7;
+				INFOPLIST_FILE = Joy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Arjun.Joy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B45A307C1F50D6F300B84924 /* Build configuration list for PBXProject "Joy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B45A308E1F50D6F300B84924 /* Debug */,
+				B45A308F1F50D6F300B84924 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B45A30901F50D6F300B84924 /* Build configuration list for PBXNativeTarget "Joy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B45A30911F50D6F300B84924 /* Debug */,
+				B45A30921F50D6F300B84924 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B45A30791F50D6F300B84924 /* Project object */;
+}
