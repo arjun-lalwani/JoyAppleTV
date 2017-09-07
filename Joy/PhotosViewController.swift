@@ -12,31 +12,33 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     @IBOutlet weak var photosCollectionView: UICollectionView!
     
-    var selectedImageIndex: Int?
+    var selectedImageIndex: Int!
     
-    var temporaryIamges = [UIImage(named: "Event Image"), UIImage(named: "img1"), UIImage(named: "img2"), UIImage(named: "img3"), UIImage(named: "img4"), UIImage(named: "img5"), UIImage(named: "img6"), UIImage(named: "img7"), UIImage(named: "img8"), UIImage(named: "img9"), UIImage(named: "img10"), UIImage(named: "img11"), UIImage(named: "img12")]
+    private var currentEvent: Event!
+    
+    //var temporaryIamges = [UIImage(named: "Event Image"), UIImage(named: "img1"), UIImage(named: "img2"), UIImage(named: "img3"), UIImage(named: "img4"), UIImage(named: "img5"), UIImage(named: "img6"), UIImage(named: "img7"), UIImage(named: "img8"), UIImage(named: "img9"), UIImage(named: "img10"), UIImage(named: "img11"), UIImage(named: "img12")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         photosCollectionView.dataSource = self
         photosCollectionView.delegate = self
+        
+        currentEvent = AllEvents.shared.getAllEvents()[selectedImageIndex]
     }
-
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return temporaryIamges.count
+        return currentEvent.moments.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = photosCollectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! MomentsCollectionViewCell
-        
-        cell.momentsImage.image = temporaryIamges[indexPath.row]
-        
+        cell.momentsImage.image = currentEvent.moments[indexPath.row]
         return cell
     }
     
@@ -56,7 +58,8 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollec
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "presentPhotoSegue" {
             let presentPhotoVC = segue.destination as! PresentPhotoViewController
-            presentPhotoVC.modelIndex = selectedImageIndex!
+            presentPhotoVC.modelIndex = selectedImageIndex
+            presentPhotoVC.currentEvent = currentEvent
         }
     }
 }

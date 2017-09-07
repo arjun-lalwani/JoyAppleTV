@@ -8,17 +8,10 @@
 
 import UIKit 
 
-//class Api {
-//    getEventJson(code: String, callback: (json: Dictionary) -> Void) -> Void {
-//        //sksjdflksjdlfkj
-//    
-//        callback("sdfsdfsd");
-//    }
-//}
 class CurrentEventCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var eventImage: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var eventName: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,12 +34,12 @@ class CurrentEventCollectionViewCell: UICollectionViewCell {
         
         if context.nextFocusedView == self {
             coordinator.addCoordinatedAnimations({ () -> Void in
-                self.nameLabel.center.y += (self.eventImage.center.y - self.nameLabel.center.y)
+                self.eventName.center.y += (self.eventImage.center.y - self.eventName.center.y)
             
             }, completion: nil)
         } else if context.previouslyFocusedView == self {
             coordinator.addCoordinatedAnimations({() -> Void in
-                self.nameLabel.center.y += 120
+                self.eventName.center.y += 120
             }, completion: nil)
         }
     }

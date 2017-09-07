@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JoyHeader" translatesAutoresizingMaskIntoConstraints="NO" id="A6X-0N-Zsh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JoyHeader" highlightedImage="Event Image" translatesAutoresizingMaskIntoConstraints="NO" id="A6X-0N-Zsh">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="513"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -83,6 +83,7 @@
                                         <size key="customSize" width="574" height="317"/>
                                         <connections>
                                             <outlet property="eventImage" destination="oqB-4e-h5L" id="AfP-wg-m9l"/>
+                                            <outlet property="eventName" destination="kCr-a8-eZj" id="eQL-CA-71v"/>
                                             <outlet property="nameLabel" destination="kCr-a8-eZj" id="FTh-q8-1BW"/>
                                         </connections>
                                     </collectionViewCell>
@@ -112,15 +113,10 @@
                                 <rect key="frame" x="877" y="77" width="166" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Dd-Da-QH0">
-                                <rect key="frame" x="780" y="147" width="360" height="236"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="abc" destination="1Dd-Da-QH0" id="fSo-by-Jod"/>
                         <outlet property="eventsCollectionView" destination="jXU-DR-OPM" id="WdP-js-DiH"/>
                         <segue destination="w2q-31-JFc" kind="show" identifier="joinEventSegue" id="1ar-cM-vXg"/>
                     </connections>
@@ -129,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="333" y="75"/>
         </scene>
-        <!--Devon and John-->
+        <!--MomentsVC-->
         <scene sceneID="vC4-7U-Q2z">
             <objects>
-                <viewController id="w2q-31-JFc" customClass="PhotosViewController" customModule="Joy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MomentsVC" id="w2q-31-JFc" customClass="PhotosViewController" customModule="Joy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KPq-vZ-GsT"/>
                         <viewControllerLayoutGuide type="bottom" id="Fdx-sf-Srt"/>

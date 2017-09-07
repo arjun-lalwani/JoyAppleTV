@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import PromiseKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITextFieldDelegate {
     
     @IBOutlet weak var eventsCollectionView: UICollectionView!
-    @IBOutlet weak var abc: UIImageView!
     
-    static var temporaryImages = [UIImage(named: "Event Image")]
+    // static var temporaryImages = [UIImage(named: "Event Image")]
     
     let events = AllEvents.shared
     
@@ -30,13 +30,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ViewController.temporaryImages.count + 1
+        return events.getAllEvents().count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        tif indexPath.row < ViewController.temporaryImages.count {
+        if indexPath.row < events.getAllEvents().count {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventCell", for: indexPath) as! CurrentEventCollectionViewCell
+            
+            let currentEvent = events.getAllEvents()[indexPath.row]
+            cell.eventImage.image = currentEvent.primaryImageHorizontal
+            cell.eventName.text = currentEvent.eventName
+            
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newEventCell", for: indexPath) as! NewEventCollectionViewCell
@@ -49,15 +54,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.row < ViewController.temporaryImages.count {
-            openSelectedEvent()
+        if indexPath.row < events.getAllEvents().count {
+            openSelectedEvent(index: indexPath)
         } else {
             addNewEvent()
         }
-    }
-    
-    func openSelectedEvent() {
-        self.performSegue(withIdentifier: "joinEventSegue", sender: nil)
     }
     
     func addNewEvent() {
@@ -72,21 +73,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let join = UIAlertAction(title: "Join", style: .default, handler: {(alert: UIAlertAction!) in
             
-            let codeEntered = eventCodeTextField!.text!
-            
-            if AddEventModel.verifyEventCode(codeEntered) {
-                self.performSegue(withIdentifier: "joinEventSegue", sender: nil)
-//                ViewController.temporaryImages.append(UIImage(named: "Event Image"))
-                MomentsAPI.verifyEventCode("doesn't matter what you put", completion: {() -> Void in
-                    // async call after completing requests
-                    self.eventsCollectionView.reloadData()
-                }, imagez: self.abc)
-//                self.eventsCollectionView.reloadData()
-            } else {
-            
-                let alert = UIAlertController(title: "Invalid Code", message: "The code entered doesn't seem to match any events", preferredStyle: .alert)
-                alert.addAction(AlertActions.cancel)
-                self.present(alert, animated: true, completion: nil)
+            self.showActivityIndicator()
+
+            firstly {
+                self.tryAddingEventWithCode(code: eventCodeTextField?.text)
+            }.then {_ in 
+                self.saveEventCode() 
+            }.then {
+                 self.openNewJoinedEvent()
+            }.always {
+                self.hideActivityIndicator()
+            }.catch {_ in 
+                self.showAddEventError()
             }
         })
         
@@ -96,8 +94,45 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.present(alert, animated: true, completion: nil)
     }
     
+    private func openSelectedEvent(index: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let photosVC = storyboard.instantiateViewController(withIdentifier: "momentsVC") as! PhotosViewController
+        photosVC.selectedImageIndex = index.row
+        self.present(photosVC, animated: true, completion: nil)
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.resignFirstResponder()
+    }
+    
+    private func openNewJoinedEvent() {
+        self.performSegue(withIdentifier: "joinEventSegue", sender: nil)
+        eventsCollectionView.reloadData()
+    }
+    
+    private func showActivityIndicator() {
+        print("show here")
+    }
+    
+    // PLAY WITH PROMISES and see what this does
+    private func tryAddingEventWithCode(code: String?) -> Promise<Any> {
+        if let code = code {
+            return AllEvents.shared.addNewEvent(code)
+        }
+    }
+    
+    private func saveEventCode() {
+        // In user defaults
+    }
+    
+    private func hideActivityIndicator() {
+        print("hidden")
+    }
+    
+    private func showAddEventError() {
+        let alert = UIAlertController(title: "Invalid Code", message: "The code entered doesn't seem to match any events", preferredStyle: .alert)
+        alert.addAction(AlertActions.cancel)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
