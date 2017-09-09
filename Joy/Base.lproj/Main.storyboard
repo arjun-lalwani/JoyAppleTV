@@ -57,10 +57,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="574" height="317"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Event Image" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oqB-4e-h5L">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oqB-4e-h5L">
                                                     <rect key="frame" x="8" y="8" width="558" height="301"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devon &amp; John" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="kCr-a8-eZj">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="kCr-a8-eZj">
                                                     <rect key="frame" x="20" y="241" width="534" height="56"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="534" id="4ma-4j-sak"/>
@@ -84,7 +84,6 @@
                                         <connections>
                                             <outlet property="eventImage" destination="oqB-4e-h5L" id="AfP-wg-m9l"/>
                                             <outlet property="eventName" destination="kCr-a8-eZj" id="eQL-CA-71v"/>
-                                            <outlet property="nameLabel" destination="kCr-a8-eZj" id="FTh-q8-1BW"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newEventCell" id="47x-Hh-Jsg" userLabel="newEventCell" customClass="NewEventCollectionViewCell" customModule="Joy" customModuleProvider="target">
@@ -125,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="333" y="75"/>
         </scene>
-        <!--MomentsVC-->
+        <!--momentsVC-->
         <scene sceneID="vC4-7U-Q2z">
             <objects>
-                <viewController title="MomentsVC" id="w2q-31-JFc" customClass="PhotosViewController" customModule="Joy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="momentsVC" title="momentsVC" id="w2q-31-JFc" customClass="PhotosViewController" customModule="Joy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KPq-vZ-GsT"/>
                         <viewControllerLayoutGuide type="bottom" id="Fdx-sf-Srt"/>

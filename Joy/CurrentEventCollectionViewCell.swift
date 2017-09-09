@@ -13,17 +13,7 @@ class CurrentEventCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventName: UILabel!
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        // Add event Image 
-        // Add name of couple
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
+    var eventInfo: EventInfo!
     
     override var canBecomeFocused: Bool {
         return true

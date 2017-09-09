@@ -9,14 +9,18 @@
 import UIKit
 
 class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
+    
+    // MARK: Outlets
     @IBOutlet weak var photosCollectionView: UICollectionView!
     
-    var selectedImageIndex: Int!
+    // FIXME: Remove temporary images
+    var temporaryIamges = [UIImage(named: "Event Image"), UIImage(named: "img1"), UIImage(named: "img2"), UIImage(named: "img3"), UIImage(named: "img4"), UIImage(named: "img5"), UIImage(named: "img6"), UIImage(named: "img7"), UIImage(named: "img8"), UIImage(named: "img9"), UIImage(named: "img10"), UIImage(named: "img11"), UIImage(named: "img12")]
+
+    // MARK: Properties
+    var selectedEventIndex: Int!
+    var selectedEventInfo: EventInfo!
     
-    private var currentEvent: Event!
-    
-    //var temporaryIamges = [UIImage(named: "Event Image"), UIImage(named: "img1"), UIImage(named: "img2"), UIImage(named: "img3"), UIImage(named: "img4"), UIImage(named: "img5"), UIImage(named: "img6"), UIImage(named: "img7"), UIImage(named: "img8"), UIImage(named: "img9"), UIImage(named: "img10"), UIImage(named: "img11"), UIImage(named: "img12")]
+    private var eventAssets: [Asset]! // POPULATE THIS IN VIEW WILL APPEAR
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +28,13 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollec
         // Do any additional setup after loading the view.
         photosCollectionView.dataSource = self
         photosCollectionView.delegate = self
-        
-        currentEvent = AllEvents.shared.getAllEvents()[selectedImageIndex]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // FIXME: Add below code
+        // eventAssets = selectedEventInfo.getEventAssets
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -33,12 +42,17 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return currentEvent.moments.count
+        // FIXME: replace with - eventAssets.count
+        return temporaryIamges.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = photosCollectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! MomentsCollectionViewCell
-        cell.momentsImage.image = currentEvent.moments[indexPath.row]
+        
+        // FIXME: replace with - eventAssets[indexPath.row].getImage()
+        if let image = temporaryIamges[indexPath.row] {
+            cell.momentsImage.image = image
+        }
         return cell
     }
     
@@ -51,15 +65,16 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedImageIndex = indexPath.row
+        selectedEventIndex = indexPath.row
         self.performSegue(withIdentifier: "presentPhotoSegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "presentPhotoSegue" {
             let presentPhotoVC = segue.destination as! PresentPhotoViewController
-            presentPhotoVC.modelIndex = selectedImageIndex
-            presentPhotoVC.currentEvent = currentEvent
+            presentPhotoVC.modelIndex = selectedEventIndex
+            // FIXME: Add below code
+            // presentPhotoVC.eventAssets = eventAssets
         }
     }
 }
